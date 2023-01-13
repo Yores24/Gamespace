@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="845.0" prefWidth="1310.0" styleClass="userBackground" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.home.gamespace.AdminController">
+   <top>
+      <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="147.0" prefWidth="1310.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="159.0" prefWidth="221.0" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="113.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="0.79" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="147.0" prefWidth="405.0">
+               <children>
+                  <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="212.0" text="ADMIN" textFill="#ababab">
+                     <font>
+                        <Font name="Dubai Medium" size="64.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="141.0" text="~ Admin hai .  " textFill="#60b7ff" />
+               </children>
+            </HBox>
+            <HBox prefHeight="137.0" prefWidth="365.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="137.0" prefWidth="198.0">
+               <children>
+                  <Button fx:id="logOut" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#logOutHandler" prefHeight="36.0" prefWidth="87.0" styleClass="buyButton" stylesheets="@style.css" text="Log out">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="797.0" prefWidth="1090.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="1000.0" prefWidth="1090.0" stylesheets="@style.css">
+               <children>
+                  <VBox fx:id="addGamePanel" alignment="CENTER" prefHeight="710.0" prefWidth="1090.0" styleClass="loginBackground" stylesheets="@style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="398.0" styleClass="loginContainer" stylesheets="@style.css">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="225.0" styleClass="loginContainer" stylesheets="@style.css" text="New Game Details" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" top="20.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="661.0" text="Game Name" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addGameName" styleClass="grayBg" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Label prefHeight="19.0" prefWidth="845.0" text="Game Id" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addGameId" styleClass="grayBg" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Label prefHeight="17.0" prefWidth="573.0" text="Price" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addGamePrice" styleClass="grayBg" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="283.0" prefHeight="17.0" prefWidth="658.0" text="Game Tag Line" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addGameTagLine" layoutX="10.0" layoutY="300.0" styleClass="grayBg" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="415.0" prefHeight="17.0" prefWidth="580.0" text="Developer Name" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addGameDeveloperName" layoutX="10.0" layoutY="432.0" styleClass="grayBg" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="436.0" prefHeight="17.0" prefWidth="484.0" text="Rating" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addGameRating" layoutX="10.0" layoutY="453.0" styleClass="grayBg" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Label layoutX="10.0" layoutY="457.0" prefHeight="17.0" prefWidth="547.0" text="Discount" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addGameDiscount" layoutX="10.0" layoutY="474.0" styleClass="grayBg" stylesheets="@style.css">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <Button fx:id="addGameButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addGameHandler" prefHeight="34.0" prefWidth="143.0" styleClass="buyButton" stylesheets="@style.css" text="Add Game" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label prefHeight="38.0" prefWidth="198.0" text="Game Added Successufully..." visible="false">
+                                 <font>
+                                    <Font name="Lucida Calligraphy Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="removeGamePanel" alignment="CENTER" prefHeight="700.0" prefWidth="1090.0" stylesheets="@style.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="389.0" styleClass="loginContainer">
+                           <children>
+                              <Label prefHeight="45.0" prefWidth="112.0" text="Game Details" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="32.0" prefWidth="367.0" />
+                              <Label prefHeight="17.0" prefWidth="390.0" text="Game Id" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="removeGameId" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="392.0" styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label layoutX="22.0" layoutY="335.0" prefHeight="17.0" prefWidth="388.0" text="Reason to Delete" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+
+                              <TextArea prefHeight="123.0" prefWidth="389.0" promptText="Type Something ...." styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <Button fx:id="removeGameHandler" mnemonicParsing="false" onAction="#removeGameHandler" prefHeight="43.0" prefWidth="115.0" styleClass="buyButton" text="Remove Game">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label text="Game Removed Successfully.." visible="false">
+                                 <font>
+                                    <Font name="Lucida Calligraphy Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="showGamesPanel" alignment="CENTER" prefHeight="700.0" prefWidth="1090.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="703.0" prefWidth="1090.0" styleClass="transparentBg" stylesheets="@style.css">
+                           <content>
+                              <VBox fx:id="gamesLayout" alignment="TOP_CENTER" prefHeight="696.0" prefWidth="1088.0" spacing="10.0">
+                                 <children>
+                                    <HBox disable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" styleClass="gameBox" stylesheets="@style.css" visible="false">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="334.0" prefWidth="302.0" style="-fx-background-radius: 10px;" styleClass="gameImage">
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                          <VBox prefHeight="197.0" prefWidth="37.0" />
+                                          <VBox prefHeight="334.0" prefWidth="489.0">
+                                             <children>
+                                                <Label prefHeight="42.0" prefWidth="595.0" text="Valorant" textFill="#dadde3">
+                                                   <font>
+                                                      <Font name="Baskerville Old Face" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="36.0" prefWidth="520.0" text="TagLine" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Viner Hand ITC" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label prefHeight="27.0" prefWidth="61.0" text="Price :" textFill="#49b3ff">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="1000" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="27.0" prefWidth="36.0" styleClass="discount" text="2000" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Italic" size="14.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="88.0" prefHeight="45.0" prefWidth="467.0">
+                                                   <children>
+                                                      <Label text="Rating :  " textFill="#f5ff88">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="5" textFill="#f5ff88">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox prefHeight="197.0" prefWidth="99.0" HBox.hgrow="ALWAYS" />
+                                          <VBox alignment="CENTER" prefHeight="334.0" prefWidth="221.0">
+                                             <children>
+                                                <Label text="Developed by: " textFill="WHITE">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="215.0" text="~developer" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Papyrus" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox prefHeight="42.0" prefWidth="218.0" />
+                                                <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="186.0" styleClass="buyButton" text="Buy">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="addUsingCsvPanel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="1090.0" stylesheets="@style.css" visible="false">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="389.0" styleClass="loginContainer">
+                           <children>
+                              <Label prefHeight="45.0" prefWidth="199.0" text="Add Games using CSV" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="32.0" prefWidth="367.0" />
+                              <Label prefHeight="17.0" prefWidth="390.0" text="Admin Password" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="adminPassword" styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <Label layoutX="22.0" layoutY="335.0" prefHeight="17.0" prefWidth="388.0" text="Message(optional)" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextArea prefHeight="123.0" prefWidth="389.0" promptText="Type Something ...." styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <Label fx:id="errorLabel" prefHeight="19.0" prefWidth="491.0" text="Password is incorrect" textFill="RED" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#addGameCsv" prefHeight="43.0" prefWidth="115.0" styleClass="buyButton" text="Add Games">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label text="Game Removed Successfully.." textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="Lucida Calligraphy Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="updateUsingCsvPanel" alignment="CENTER" prefHeight="720.0" prefWidth="1110.0" stylesheets="@style.css" visible="false">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="389.0" styleClass="loginContainer">
+                           <children>
+                              <Label prefHeight="45.0" prefWidth="219.0" text="Update Games using CSV" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="32.0" prefWidth="367.0" />
+                              <Label prefHeight="17.0" prefWidth="390.0" text="Admin Password" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="adminPassword1" styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <Label layoutX="22.0" layoutY="335.0" prefHeight="17.0" prefWidth="388.0" text="Message(optional)" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextArea prefHeight="123.0" prefWidth="389.0" promptText="Type Something ...." styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </TextArea>
+                              <Label fx:id="errorLabel1" prefHeight="19.0" prefWidth="491.0" text="Password is incorrect" textFill="RED" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#updateGameCsv" prefHeight="43.0" prefWidth="115.0" styleClass="buyButton" text="Update Games">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Label text="Game Removed Successfully.." textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="Lucida Calligraphy Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="changePasswordPanel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="720.0" prefWidth="1110.0" stylesheets="@style.css" visible="false">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="389.0" styleClass="loginContainer">
+                           <children>
+                              <Label prefHeight="45.0" prefWidth="155.0" text="Change Password" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="32.0" prefWidth="367.0" />
+                              <Label prefHeight="17.0" prefWidth="390.0" text="Old Password" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="oldPassword" styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <Label prefHeight="17.0" prefWidth="390.0" text="New Password" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <PasswordField fx:id="newPassword" styleClass="grayBg">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <Label fx:id="changePassErrorLabel" prefHeight="19.0" prefWidth="491.0" text="Password is incorrect" textFill="RED" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#changePassword" prefHeight="43.0" prefWidth="131.0" styleClass="buyButton" text="Change Password">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="845.0" prefWidth="220.0" spacing="20.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="75.0" prefWidth="220.0" />
+            <Button fx:id="addGameNavigationButton" mnemonicParsing="false" onAction="#addGamePanelHandler" prefHeight="35.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@style.css" text="Add Game" textFill="#fff6f6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="removeGameButton" mnemonicParsing="false" onAction="#removeGamePanelHandler" prefHeight="35.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@style.css" text="Remove Game" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="showGamesNavigationButton" mnemonicParsing="false" onAction="#showGamesPanelHandler" prefHeight="35.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@style.css" text="Show games" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="20.0" layoutY="270.0" mnemonicParsing="false" onAction="#addCsvHandler" prefHeight="35.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@style.css" text="Add using CSV" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="20.0" layoutY="215.0" mnemonicParsing="false" onAction="#updateCsvHandler" prefHeight="35.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@style.css" text="Update using CSV" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="20.0" layoutY="325.0" mnemonicParsing="false" onAction="#changePasswordPanelHandler" prefHeight="35.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@style.css" text="Change Password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
