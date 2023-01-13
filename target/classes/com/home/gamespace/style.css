@@ -1,0 +1,72 @@
+.loginBackground{
+    -fx-background-image: url("images/loginbg.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.grayBg{
+    -fx-background-color: gray;
+    -fx-text-fill:Black;
+    -fx-font-weight: bold;
+}
+
+.loginContainer{
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-radius: 10px;
+}
+.addBackground{
+    -fx-background-color: black;
+}
+
+.userBackground{
+    -fx-background-image: url("images/1.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+
+.userborder{
+    -fx-border-width:0 0 2px 0;
+    -fx-border-color: #8c8c8c;
+    -fx-border-style: solid;
+}
+.userborderright{
+    -fx-border-width:0 2px 0 0;
+    -fx-border-color: #8c8c8c;
+    -fx-border-style: solid;
+}
+
+.gameBox{
+    -border-width: 2px;
+    -fx-border-color: #fff;
+    -fx-border-style:solid;
+    -fx-border-radius: 10px;
+}
+
+.discount .text{
+    -fx-strikethrough:true;
+}
+
+.buyButton{
+    -fx-background-color: #097cb5;
+    -fx-background-radius: 10;
+}
+
+.buyButton:hover{
+    -fx-background-color: #237096;
+}
+
+.transparentBg{
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.sideButton{
+    -fx-background-color: #3d403d;
+    -fx-background-radius: 10;
+}
+
+.sideButton:hover{
+    -fx-background-color: #525452;
+}
